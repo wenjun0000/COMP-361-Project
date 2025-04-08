@@ -1,0 +1,25 @@
+# Godot 4+ specific ignores
+.godot/
+addons/script-ide/README.md
+addons/script-ide/Popup.gd
+addons/script-ide/plugin.gd
+addons/script-ide/plugin.cfg
+addons/script-ide/LICENSE
+addons/script-ide/icon/signal.png.import
+addons/script-ide/icon/signal.png
+addons/script-ide/icon/property.png.import
+addons/script-ide/icon/property.png
+addons/script-ide/icon/keyword.png.import
+addons/script-ide/icon/keyword.png
+addons/script-ide/icon/func_set.png.import
+addons/script-ide/icon/func_set.png
+addons/script-ide/icon/func_get.png.import
+addons/script-ide/icon/func_get.png
+addons/script-ide/icon/func.png.import
+addons/script-ide/icon/func.png
+addons/script-ide/icon/export.png.import
+addons/script-ide/icon/export.png
+addons/script-ide/icon/constant.png.import
+addons/script-ide/icon/constant.png
+addons/script-ide/icon/class.png.import
+addons/script-ide/icon/class.png

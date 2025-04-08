@@ -1,0 +1,448 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdpm8wqsb512b"]
+
+[ext_resource type="Script" uid="uid://drfthy4vjpgeo" path="res://scene/td/td_scene_manager.gd" id="1_s35g0"]
+[ext_resource type="PackedScene" uid="uid://cmeuqvh1nqr8p" path="res://map/map01.tscn" id="2_k3f6g"]
+[ext_resource type="PackedScene" uid="uid://drd38l6fhl3tw" path="res://UI/td/ui.tscn" id="3_bmh8f"]
+
+[node name="td_scene" type="Node2D"]
+script = ExtResource("1_s35g0")
+
+[node name="Map2" parent="." instance=ExtResource("2_k3f6g")]
+
+[node name="SweepLine" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, 600)
+width = 5.0
+default_color = Color(0.986921, 0, 0.140868, 1)
+
+[node name="VSplit" type="Node2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="VSplit"]
+visible = false
+points = PackedVector2Array(96, 0, 96, 391.852, 96, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D4" type="Line2D" parent="VSplit"]
+visible = false
+points = PackedVector2Array(184, 0, 184, 372)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D5" type="Line2D" parent="VSplit"]
+visible = false
+points = PackedVector2Array(252, 0, 252, 240.936, 252, 480)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D7" type="Line2D" parent="VSplit"]
+visible = false
+points = PackedVector2Array(311, 0, 311, 104)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D8" type="Line2D" parent="VSplit"]
+visible = false
+points = PackedVector2Array(452, 0, 452, 155.427, 452, 492)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D10" type="Line2D" parent="VSplit"]
+visible = false
+points = PackedVector2Array(523, 0, 523, 364)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D13" type="Line2D" parent="VSplit"]
+visible = false
+points = PackedVector2Array(551, 0, 551, 306.679, 551, 367)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D14" type="Line2D" parent="VSplit"]
+visible = false
+points = PackedVector2Array(585, 0, 585, 137)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D15" type="Line2D" parent="VSplit"]
+visible = false
+points = PackedVector2Array(670, 0, 670, 81)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D16" type="Line2D" parent="VSplit"]
+visible = false
+position = Vector2(0, 1)
+points = PackedVector2Array(747, 0, 747, 176, 747, 258)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D2" type="Line2D" parent="VSplit"]
+visible = false
+points = PackedVector2Array(155, 535, 155, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D3" type="Line2D" parent="VSplit"]
+visible = false
+position = Vector2(0, -328.352)
+scale = Vector2(1, 1.55093)
+points = PackedVector2Array(262, 376, 262, 531.922, 262, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D6" type="Line2D" parent="VSplit"]
+visible = false
+position = Vector2(0, -328.352)
+scale = Vector2(1, 1.55093)
+points = PackedVector2Array(289, 406.436, 289, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D9" type="Line2D" parent="VSplit"]
+visible = false
+position = Vector2(0, -328.352)
+scale = Vector2(1, 1.55093)
+points = PackedVector2Array(434, 322, 434, 547.91, 434, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D11" type="Line2D" parent="VSplit"]
+visible = false
+position = Vector2(1, -327)
+scale = Vector2(1, 1.55093)
+points = PackedVector2Array(593, 532.167, 593, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D17" type="Line2D" parent="VSplit"]
+visible = false
+position = Vector2(1, -327)
+scale = Vector2(1, 1.55093)
+points = PackedVector2Array(660, 397.182, 660, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D19" type="Line2D" parent="VSplit"]
+visible = false
+position = Vector2(1, -327)
+scale = Vector2(1, 1.55093)
+points = PackedVector2Array(778, 504.215, 778, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D12" type="Line2D" parent="VSplit"]
+visible = false
+position = Vector2(1, -327)
+scale = Vector2(1, 1.55093)
+points = PackedVector2Array(619, 401.695, 619, 452.664, 619, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D18" type="Line2D" parent="VSplit"]
+visible = false
+position = Vector2(1, -327)
+scale = Vector2(1, 1.55093)
+points = PackedVector2Array(736, 332, 736, 375.26, 736, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Line2D20" type="Line2D" parent="VSplit"]
+visible = false
+position = Vector2(1, -327)
+scale = Vector2(1, 1.55093)
+points = PackedVector2Array(855, 0, 855, 416.525, 855, 600)
+width = 1.0
+default_color = Color(0.578262, 0, 0.0405982, 1)
+
+[node name="Trapezoids" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(3, 3, 93, 3, 93, 597, 1, 597)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(99, 401, 152, 534, 152, 597, 99, 597)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(158, 538, 259, 500, 259, 597, 157, 597)
+
+[node name="Polygon2D7" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(254, 247, 260, 257, 260, 491, 254, 480)
+
+[node name="Polygon2D8" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(264, 263, 287, 302, 287, 597, 264, 597)
+
+[node name="Polygon2D9" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(292, 302, 431, 177, 431, 597, 292, 597)
+
+[node name="Polygon2D12" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(437, 525, 591, 502, 591, 596, 437, 596)
+
+[node name="Polygon2D13" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(597, 500, 618, 397, 617, 596, 597, 596)
+
+[node name="Polygon2D16" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(623, 298, 659, 292, 659, 596, 623, 596)
+
+[node name="Polygon2D23" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(664, 289, 734, 198, 734, 596, 664, 596)
+
+[node name="Polygon2D25" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(739, 270, 777, 459, 777, 596, 739, 596)
+
+[node name="Polygon2D26" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(782, 457, 854, 331, 854, 596, 782, 596)
+
+[node name="Polygon2D24" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(739, 191, 745, 184, 745, 256, 739, 253)
+
+[node name="Polygon2D11" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(437, 176, 449, 164, 448, 491, 439, 506)
+
+[node name="Polygon2D14" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(455, 5, 518, 5, 520, 361, 455, 479)
+
+[node name="Polygon2D15" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(526, 5, 548, 5, 548, 363, 526, 360)
+
+[node name="Polygon2D18" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(554, 6, 582, 6, 582, 139, 554, 279)
+
+[node name="Polygon2D19" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(587, 7, 668, 7, 668, 79, 587, 132)
+
+[node name="Polygon2D20" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(672, 7, 745, 7, 745, 171, 672, 79)
+
+[node name="Polygon2D21" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(750, 7, 853, 7, 853, 314, 750, 258)
+
+[node name="Polygon2D22" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(859, 7, 997, 7, 997, 596, 859, 596)
+
+[node name="Polygon2D17" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(554, 309, 618, 299, 618, 370, 554, 364)
+
+[node name="Polygon2D5" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(187, 2, 250, 2, 250, 474, 187, 371)
+
+[node name="Polygon2D6" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(255, 3, 308, 3, 308, 105, 255, 232)
+
+[node name="Polygon2D10" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(314, 4, 449, 4, 449, 150, 314, 103)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Trapezoids"]
+visible = false
+color = Color(0.251658, 0.433481, 0.733307, 0.529412)
+polygon = PackedVector2Array(99, 3, 181, 3, 181, 369, 99, 388)
+
+[node name="PathingTrapezoids" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(3, 3, 93, 3, 93, 597, 1, 597)
+
+[node name="Polygon2D14" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(455, 5, 518, 5, 520, 361, 455, 479)
+
+[node name="Polygon2D15" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(526, 5, 548, 5, 548, 363, 526, 360)
+
+[node name="Polygon2D18" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(554, 6, 582, 6, 582, 139, 554, 279)
+
+[node name="Polygon2D19" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(587, 7, 668, 7, 668, 79, 587, 132)
+
+[node name="Polygon2D20" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(672, 7, 745, 7, 745, 171, 672, 79)
+
+[node name="Polygon2D21" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(750, 7, 853, 7, 853, 314, 750, 258)
+
+[node name="Polygon2D5" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(187, 2, 250, 2, 250, 474, 187, 371)
+
+[node name="Polygon2D6" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(255, 3, 308, 3, 308, 105, 255, 232)
+
+[node name="Polygon2D10" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(314, 4, 449, 4, 449, 150, 314, 103)
+
+[node name="Polygon2D2" type="Polygon2D" parent="PathingTrapezoids"]
+visible = false
+color = Color(0.528943, 0.327912, 0.707975, 0.529412)
+polygon = PackedVector2Array(99, 3, 181, 3, 181, 369, 99, 388)
+
+[node name="Graph" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Line2D" type="Line2D" parent="Graph"]
+points = PackedVector2Array(47, 293, 139, 193, 217, 221, 281, 77, 383, 67, 488, 206, 537, 187, 568, 96, 625, 59, 709, 59, 807, 152, 930, 310)
+width = 6.0
+default_color = Color(7.70092e-07, 0.766179, 0.195588, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D2" type="Line2D" parent="Graph"]
+points = PackedVector2Array(46, 294, 124, 537, 209, 557, 276, 443, 362, 419, 518, 559, 607, 534, 640, 447, 699, 426, 757, 506, 819, 501, 929, 309)
+width = 6.0
+default_color = Color(7.70092e-07, 0.766179, 0.195588, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D3" type="Line2D" parent="Graph"]
+points = PackedVector2Array(217, 221, 257, 368, 275, 443)
+width = 6.0
+default_color = Color(7.70092e-07, 0.766179, 0.195588, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D4" type="Line2D" parent="Graph"]
+points = PackedVector2Array(362, 421, 444, 314, 488, 205)
+width = 6.0
+default_color = Color(7.70092e-07, 0.766179, 0.195588, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D5" type="Line2D" parent="Graph"]
+points = PackedVector2Array(537, 187, 584, 335, 640, 447)
+width = 6.0
+default_color = Color(7.70092e-07, 0.766179, 0.195588, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D6" type="Line2D" parent="Graph"]
+points = PackedVector2Array(699, 427, 741, 219, 807, 153, 790, 102)
+width = 6.0
+default_color = Color(7.70092e-07, 0.766179, 0.195588, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D7" type="Line2D" parent="Graph"]
+points = PackedVector2Array(76, 549, 46, 295)
+width = 6.0
+default_color = Color(7.70092e-07, 0.766179, 0.195588, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Path" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Line2D" type="Line2D" parent="Path"]
+points = PackedVector2Array(47, 293, 139, 193, 217, 221, 281, 77, 383, 67, 488, 206, 537, 187, 568, 96, 625, 59, 709, 59, 807, 152, 790, 102)
+width = 8.0
+default_color = Color(0.231554, 0.445764, 0.829143, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D7" type="Line2D" parent="Path"]
+points = PackedVector2Array(76, 549, 46, 295)
+width = 8.0
+default_color = Color(0.231554, 0.445764, 0.829143, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="FinalPath" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(77, 549, 96, 188, 183, 178, 252, 95, 310, 51, 452, 75, 523, 184, 551, 133, 585, 62, 670, 39, 747, 80, 790, 102)
+width = 4.0
+
+[node name="UI" parent="." instance=ExtResource("3_bmh8f")]
+unique_name_in_owner = true
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.9168, 0.722789, 0, 1)
+polygon = PackedVector2Array(77, 540, 68, 549, 77, 558, 86, 549)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(714, -445)
+color = Color(0.9168, 0.722789, 0, 1)
+polygon = PackedVector2Array(77, 540, 68, 549, 77, 558, 86, 549)
+
+[connection signal="pressed" from="UI/Intro/MarginContainer/VBoxContainer/IntroButton" to="." method="_on_intro_button_pressed"]
+[connection signal="pressed" from="UI/Graph/MarginContainer/VBoxContainer/GraphButton" to="." method="_on_graph_button_pressed"]
+[connection signal="pressed" from="UI/TrapPath/MarginContainer/VBoxContainer/TrapPathButton" to="." method="_on_trap_path_button_pressed"]
+[connection signal="pressed" from="UI/FinalPath/MarginContainer/VBoxContainer/FinalPathButton" to="." method="_on_final_path_button_pressed"]
+[connection signal="pressed" from="UI/ReturnButton" to="." method="_on_return_button_pressed"]
+
+[editable path="UI"]

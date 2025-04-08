@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cmeuqvh1nqr8p"]
+
+[node name="Map" type="Node2D"]
+z_index = -1
+
+[node name="Boundary" type="Polygon2D" parent="."]
+color = Color(0.423651, 0.423651, 0.423651, 1)
+polygon = PackedVector2Array(0, 0, 1000, 0, 1000, 600, 0, 600)
+
+[node name="Obstacles" type="Node" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(311, 104, 452, 155, 289, 302, 253, 242)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(738, 255, 856, 319, 779, 455)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(523, 364, 619, 374, 594, 498, 435, 521)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(98, 392, 184, 372, 261, 496, 155, 535)
+
+[node name="Polygon2D5" type="Polygon2D" parent="Obstacles"]
+polygon = PackedVector2Array(585, 137, 551, 307, 660, 289, 747, 177, 670, 81)
+
+[node name="Start" type="Marker2D" parent="."]
+position = Vector2(77, 549)
+
+[node name="End" type="Marker2D" parent="."]
+position = Vector2(790, 103)

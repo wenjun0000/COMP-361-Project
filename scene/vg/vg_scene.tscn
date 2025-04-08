@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dghect5ssnsm8"]
+
+[ext_resource type="Script" uid="uid://bg6bam6giihn4" path="res://scene/vg/vg_scene_manager.gd" id="1_pj0y5"]
+[ext_resource type="PackedScene" uid="uid://cyicvm1fy533n" path="res://UI/vg/phase_1ui.tscn" id="2_cdwar"]
+[ext_resource type="PackedScene" uid="uid://cx3la55nsc2wo" path="res://UI/vg/phase_2ui.tscn" id="3_rq500"]
+[ext_resource type="PackedScene" uid="uid://bbv37nf8dxt25" path="res://UI/vg/phase_3ui.tscn" id="4_70184"]
+
+[node name="VGScene" type="Node2D"]
+script = ExtResource("1_pj0y5")
+
+[node name="Phase1UI" parent="." instance=ExtResource("2_cdwar")]
+unique_name_in_owner = true
+
+[node name="Phase2UI" parent="." instance=ExtResource("3_rq500")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Phase3UI" parent="." instance=ExtResource("4_70184")]
+unique_name_in_owner = true
+visible = false
+
+[node name="layer" type="CanvasLayer" parent="."]
+
+[node name="ReturnButton" type="Button" parent="layer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -65.0
+offset_top = -31.0
+offset_right = 65.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+text = "Return to Menu"
+
+[connection signal="pressed" from="layer/ReturnButton" to="." method="_on_return_button_pressed"]

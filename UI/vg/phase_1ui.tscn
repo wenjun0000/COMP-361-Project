@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyicvm1fy533n"]
+
+[ext_resource type="Script" uid="uid://caoa2sykemra" path="res://UI/vg/phase_1_ui.gd" id="1_og0tq"]
+[ext_resource type="Texture2D" uid="uid://bm7vkehwgu3yc" path="res://content/clips/visibility_graph-0.jpeg" id="2_fwelg"]
+[ext_resource type="Texture2D" uid="uid://cxbkwbxbi5mmk" path="res://content/clips/path_search_finished-0.jpeg" id="3_wewpj"]
+
+[node name="Phase1UI" type="CanvasLayer"]
+script = ExtResource("1_og0tq")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.196078, 0.196078, 0.239216)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture = ExtResource("2_fwelg")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Create visibility graph by connecting edges between
+the obstacle vertices and the start/end points."
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture = ExtResource("3_wewpj")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Use Dijkstra algorithm on the visibility graph to compute
+the shortest path."
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Start"
+
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

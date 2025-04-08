@@ -1,0 +1,285 @@
+[gd_scene load_steps=7 format=3 uid="uid://drd38l6fhl3tw"]
+
+[ext_resource type="Texture2D" uid="uid://ceuxyp4ov48rx" path="res://content/screenshot/trapezoid.PNG" id="2_tb2u4"]
+[ext_resource type="Texture2D" uid="uid://cnkmwitd6obkn" path="res://content/screenshot/graph.PNG" id="3_cv0dd"]
+[ext_resource type="Texture2D" uid="uid://d366d6omq2lgv" path="res://content/screenshot/center_of_trapezoid.PNG" id="4_qr8ql"]
+[ext_resource type="Texture2D" uid="uid://bt52fjtcq4srv" path="res://content/screenshot/path.PNG" id="5_mtjbx"]
+[ext_resource type="Texture2D" uid="uid://byc15obbrgtfw" path="res://content/screenshot/pathing_trapezoids.PNG" id="6_clkqv"]
+[ext_resource type="Texture2D" uid="uid://dafmbbxmeey5g" path="res://content/screenshot/final_path.PNG" id="6_mtjbx"]
+
+[node name="UI" type="CanvasLayer"]
+metadata/_edit_use_anchors_ = true
+
+[node name="Intro" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.196078, 0.196078, 0.239216)
+
+[node name="MarginContainer" type="MarginContainer" parent="Intro"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Intro/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Intro/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Intro/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Intro/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture = ExtResource("2_tb2u4")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Intro/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Split the region into vertical trapezoids though sweep line algorithm."
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Intro/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Intro/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture = ExtResource("3_cv0dd")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Intro/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Construct a graph representation of the trapizoids' centers."
+horizontal_alignment = 1
+
+[node name="IntroButton" type="Button" parent="Intro/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Start"
+
+[node name="Graph" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.196078, 0.196078, 0.239216)
+
+[node name="MarginContainer" type="MarginContainer" parent="Graph"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Graph/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Graph/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Graph/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Graph/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture = ExtResource("2_tb2u4")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Graph/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Now the graph is represented by a collection of 
+discretized trapezoid regions."
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Graph/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Graph/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture = ExtResource("4_qr8ql")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Graph/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Abstract the traversable graph from center points
+for each individual trapezoid. "
+horizontal_alignment = 1
+
+[node name="GraphButton" type="Button" parent="Graph/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Continue"
+
+[node name="TrapPath" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.196078, 0.196078, 0.239216)
+
+[node name="MarginContainer" type="MarginContainer" parent="TrapPath"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TrapPath/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TrapPath/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TrapPath/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TrapPath/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture = ExtResource("5_mtjbx")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="TrapPath/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "With graph, path solution can be found using any type of
+graph searching algorithm, such as Dijkstra."
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TrapPath/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TrapPath/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture = ExtResource("6_clkqv")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="TrapPath/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "After finding a valid path, transform it back to 
+continuous space by indetifying each trapizoid
+containing path verticies, including start and finish. "
+horizontal_alignment = 1
+
+[node name="TrapPathButton" type="Button" parent="TrapPath/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Continue"
+
+[node name="FinalPath" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.196078, 0.196078, 0.239216)
+
+[node name="MarginContainer" type="MarginContainer" parent="FinalPath"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FinalPath/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FinalPath/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FinalPath/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="FinalPath/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture = ExtResource("6_clkqv")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="FinalPath/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Pathing trapezoid will becomes path."
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="FinalPath/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="FinalPath/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture = ExtResource("6_mtjbx")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="FinalPath/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "To avoid collision, use mid point for each trapezoid as
+vertecies for path. If a vertex intersect multiple
+trapezoid edge, prioritize the shorter one."
+horizontal_alignment = 1
+
+[node name="FinalPathButton" type="Button" parent="FinalPath/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Continue"
+
+[node name="ReturnButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -65.0
+offset_top = -31.0
+offset_right = 65.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+text = "Return to Menu"
+
+[connection signal="pressed" from="Intro/MarginContainer/VBoxContainer/IntroButton" to="." method="_on_intro_button_pressed"]
+[connection signal="pressed" from="Graph/MarginContainer/VBoxContainer/GraphButton" to="." method="_on_graph_button_pressed"]
+[connection signal="pressed" from="Graph/MarginContainer/VBoxContainer/GraphButton" to="." method="_on_intro_button_pressed"]
+[connection signal="pressed" from="TrapPath/MarginContainer/VBoxContainer/TrapPathButton" to="." method="_on_graph_button_pressed"]
+[connection signal="pressed" from="TrapPath/MarginContainer/VBoxContainer/TrapPathButton" to="." method="_on_trap_path_button_pressed"]
+[connection signal="pressed" from="TrapPath/MarginContainer/VBoxContainer/TrapPathButton" to="." method="_on_intro_button_pressed"]
+[connection signal="pressed" from="FinalPath/MarginContainer/VBoxContainer/FinalPathButton" to="." method="_on_graph_button_pressed"]
+[connection signal="pressed" from="FinalPath/MarginContainer/VBoxContainer/FinalPathButton" to="." method="_on_trap_path_button_pressed"]
+[connection signal="pressed" from="FinalPath/MarginContainer/VBoxContainer/FinalPathButton" to="." method="_on_intro_button_pressed"]

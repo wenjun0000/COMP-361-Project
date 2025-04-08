@@ -1,0 +1,248 @@
+[gd_scene load_steps=8 format=3 uid="uid://cx3la55nsc2wo"]
+
+[ext_resource type="Script" uid="uid://cuwd4w5eyxgna" path="res://UI/vg/phase_2_ui.gd" id="1_k21k1"]
+[ext_resource type="VideoStream" uid="uid://bvc2kev7v22wk" path="res://content/clips/connect_vertices.ogv" id="2_jlper"]
+[ext_resource type="VideoStream" uid="uid://dhk1f8lyd3lm5" path="res://content/clips/left_click_edge.ogv" id="2_osmtu"]
+[ext_resource type="VideoStream" uid="uid://brjntykoeauf8" path="res://content/clips/edge_visibility.ogv" id="3_hj2e3"]
+[ext_resource type="VideoStream" uid="uid://d10ybshjgdl0u" path="res://content/clips/right_click_edge.ogv" id="3_pvaet"]
+[ext_resource type="Texture2D" uid="uid://bm7vkehwgu3yc" path="res://content/clips/visibility_graph-0.jpeg" id="6_033sw"]
+[ext_resource type="VideoStream" uid="uid://db16ruwvygyga" path="res://content/clips/edge_counter.ogv" id="7_bgex1"]
+
+[node name="Phase2UI" type="CanvasLayer"]
+script = ExtResource("1_k21k1")
+
+[node name="SideBar" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(150, 600)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_bottom = 128.0
+grow_horizontal = 0
+
+[node name="ProgressButton" type="Button" parent="SideBar"]
+layout_mode = 2
+text = "Next Phase"
+
+[node name="HintButton" type="Button" parent="SideBar"]
+layout_mode = 2
+text = "Hint"
+
+[node name="HelpButton" type="Button" parent="SideBar"]
+layout_mode = 2
+text = "Help"
+
+[node name="EdgeCounter" type="Label" parent="SideBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Edges: 0/??"
+horizontal_alignment = 1
+
+[node name="BotBar" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 50)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="BotBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="Naviation Guide" type="Label" parent="BotBar/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Left click a point to start drawing."
+
+[node name="HelpMenu1" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(1000, 400)
+offset_left = 76.0
+offset_top = 124.0
+offset_right = 1076.0
+offset_bottom = 524.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.194349, 0.194349, 0.194349, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="HelpMenu1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HelpMenu1/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HelpMenu1/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HelpMenu1/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+stream = ExtResource("2_jlper")
+autoplay = true
+loop = true
+
+[node name="Label" type="Label" parent="HelpMenu1/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Edges are create by connecting each vertices to 
+every other verticies. Start/end point are valid verticies,
+but boundary verticies are not."
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HelpMenu1/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HelpMenu1/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+stream = ExtResource("3_hj2e3")
+autoplay = true
+loop = true
+
+[node name="Label" type="Label" parent="HelpMenu1/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Edges are only valid when collision free, meaning
+each edge can not intersect with a bounding edge
+of any obstacle polygones."
+horizontal_alignment = 1
+
+[node name="HelpMenu2" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(1000, 400)
+offset_left = 76.0
+offset_top = 124.0
+offset_right = 1076.0
+offset_bottom = 524.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.194349, 0.194349, 0.194349, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="HelpMenu2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HelpMenu2/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HelpMenu2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HelpMenu2/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+stream = ExtResource("2_osmtu")
+autoplay = true
+loop = true
+
+[node name="Label" type="Label" parent="HelpMenu2/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Left click on a vertex to create a edge.
+Confirm a collision-free edge (yellow) by
+left clicking on another vertex."
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HelpMenu2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HelpMenu2/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+stream = ExtResource("3_pvaet")
+autoplay = true
+loop = true
+
+[node name="Label" type="Label" parent="HelpMenu2/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Right click on a vertex will automatically
+ create all valid edges."
+horizontal_alignment = 1
+
+[node name="HelpMenu3" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(1000, 400)
+offset_left = 76.0
+offset_top = 124.0
+offset_right = 1076.0
+offset_bottom = 524.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.194349, 0.194349, 0.194349, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="HelpMenu3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HelpMenu3/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HelpMenu3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HelpMenu3/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 2
+texture = ExtResource("6_033sw")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="HelpMenu3/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "The goal of this step is to create all valid edges.
+The list of valid edges is call a 'visibility graph'."
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HelpMenu3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HelpMenu3/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+stream = ExtResource("7_bgex1")
+autoplay = true
+loop = true
+
+[node name="Label" type="Label" parent="HelpMenu3/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "You can see how many edges remaining
+by checking the edge counter.
+Progressing to next phase will add in
+remaining edges."
+horizontal_alignment = 1
+
+[connection signal="pressed" from="SideBar/ProgressButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SideBar/HintButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SideBar/HelpButton" to="." method="_on_help_button_pressed"]

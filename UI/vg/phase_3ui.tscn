@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbv37nf8dxt25"]
+
+[ext_resource type="Script" uid="uid://1aulsi81gr66" path="res://UI/vg/phase_3_ui.gd" id="1_bpasx"]
+
+[node name="Phase3UI" type="CanvasLayer"]
+script = ExtResource("1_bpasx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(150, 0)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_bottom = 40.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+
+[node name="DijkstraButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Run Dijkstra "
+
+[node name="ToggleButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Toggle Obstacle"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[connection signal="pressed" from="VBoxContainer/DijkstraButton" to="." method="_on_dijkstra_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ToggleButton" to="." method="_on_toggle_button_pressed"]
